@@ -39,6 +39,8 @@ public class ConsumerControllerClient {
 		{
 			System.out.println(ex);
 		}
+		
+		String s= response.getBody();
 		System.out.println(response.getBody());
 	}
 
@@ -48,3 +50,4 @@ public class ConsumerControllerClient {
 		return new HttpEntity<>(headers);
 	}
 }
+
