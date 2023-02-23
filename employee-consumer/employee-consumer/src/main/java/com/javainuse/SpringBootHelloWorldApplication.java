@@ -21,6 +21,8 @@ public class SpringBootHelloWorldApplication {
 		System.out.println(consumerControllerClient);
 		consumerControllerClient.getEmployee();
 		
+		consumerControllerClient.getAllEmployee();
+		
 	}
 	
 	@Bean

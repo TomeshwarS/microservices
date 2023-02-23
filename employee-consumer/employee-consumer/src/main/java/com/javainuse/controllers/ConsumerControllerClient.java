@@ -25,6 +25,22 @@ public class ConsumerControllerClient {
 		}
 		System.out.println(response.getBody());
 	}
+	
+	
+	public void getAllEmployee() throws RestClientException, IOException {
+
+		String baseUrl = "http://localhost:8080/employees";
+		RestTemplate restTemplate = new RestTemplate();
+		ResponseEntity<String> response=null;
+		try{
+		response=restTemplate.exchange(baseUrl,
+				HttpMethod.GET, getHeaders(),String.class);
+		}catch (Exception ex)
+		{
+			System.out.println(ex);
+		}
+		System.out.println(response.getBody());
+	}
 
 	private static HttpEntity<?> getHeaders() throws IOException {
 		HttpHeaders headers = new HttpHeaders();
